@@ -1,0 +1,504 @@
+MMM |  3M | 0
+AOS |  A. O. Smith Corp | 0
+ABT |  Abbott Laboratories | 0
+ABBV |  AbbVie | 0
+ABMD |  Abiomed Inc | 0
+ACN |  Accenture | 0
+ATVI |  Activision Blizzard Inc | 0
+ADBE |  Adobe | 0
+AAP |  Advance Auto Parts Inc | 0
+AMD |  Advanced Micro Devices Inc | 0
+AES |  AES Corp | 0
+AMG |  Affiliated Managers Group Inc | 0
+AFL |  Aflac Inc | 0
+A |  Agilent Technologies Inc | 0
+AIG |  AIG | 0
+APD |  Air Products and Chemicals Inc | 0
+AKAM |  Akamai Technologies Inc | 0
+ALK |  Alaska Air Group Inc | 0
+ALB |  Albemarle Corp | 0
+ARNC |  Alcoa | 0
+ARE |  Alexandria Real Estate Equities Inc | 0
+ALXN |  Alexion Pharmaceuticals Inc | 0
+ALGN |  Align Technology Inc | 0
+ALLE |  Allegion PLC | 0
+AGN |  Allergan | 0
+ADS |  Alliance Data Systems Corp | 0
+LNT |  Alliant Energy Corp | 0
+ALL |  Allstate | 0
+MO |  Altria Group | 0
+AMZN |  Amazon | 0
+AEE |  Ameren Corp | 0
+AAL |  American Airlines | 0
+AEP |  American Electric Power Company Inc | 0
+AXP |  American Express | 0
+AMT |  American Tower | 0
+AWK |  American Water Works Company Inc | 0
+AMP |  Ameriprise Financial Inc | 0
+ABC |  AmerisourceBergen Corp | 0
+AME |  Ametek Inc | 0
+AMGN |  Amgen | 0
+APH |  Amphenol Corp | 0
+APC |  Anadarko Petroleum Corp | 0
+ADI |  Analog Devices Inc | 0
+ANSS |  ANSYS Inc | 0
+AON |  Aon PLC | 0
+APA |  Apache Corp | 0
+AIV |  Apartment Investment and Management Co | 0
+AAPL |  Apple | 6
+AMAT |  Applied Materials Inc | 0
+APTV |  Aptiv PLC | 0
+ADM |  Archer Daniels Midland Co | 0
+ANET |  Arista Networks Inc | 0
+AJG |  Arthur J Gallagher & Co | 0
+AIZ |  Assurant Inc | 0
+T |  AT&T | 1
+ADSK |  Autodesk Inc | 0
+ADP |  Automatic Data Processing Inc | 0
+AZO |  Autozone Inc | 0
+AVB |  AvalonBay Communities | 0
+AVY |  Avery Dennison Corp | 0
+BHGE |  Baker Hughes A GE Co | 0
+BLL |  Ball Corp | 0
+BAC |  Bank of America | 0
+BK |  Bank of New York | 0
+BAX |  Baxter International Inc | 0
+BBT |  BB&T Corp | 0
+BDX |  Becton Dickinson and Co | 0
+BRK.B |  Berkshire Hathaway | 0
+BBY |  Best Buy Co Inc | 0
+BIIB |  Biogen | 0
+BLK |  BlackRock | 0
+BA |  Boeing | 0
+BWA |  BorgWarner Inc | 0
+BXP |  Boston Properties | 0
+BSX |  Boston Scientific Corp | 0
+BHF |  Brighthouse Financial Inc | 0
+BMY |  Bristol-Myers Squibb | 0
+AVGO |  Broadcom Inc | 0
+BR |  Broadridge Financial Solutions Inc | 0
+BFB |  Brown-Forman Corp | 0
+CHRW |  C.H. Robinson Worldwide Inc | 0
+COG |  Cabot Oil & Gas Corp | 0
+CDNS |  Cadence Design Systems Inc | 0
+CPB |  Campbell Soup Co | 0
+COF |  Capital One Financial | 0
+CAH |  Cardinal Health Inc | 0
+KMX |  Carmax Inc | 0
+CCL |  Carnival Corp | 0
+CAT |  Caterpillar | 0
+CBRE |  CBRE Group Inc | 0
+CBS |  CBS | 1
+CE |  Celanese Corp | 0
+CELG |  Celgene | 1
+CNC |  Centene Corp | 0
+CNP |  CenterPoint Energy Inc | 0
+CTL |  CenturyLink | 0
+CERN |  Cerner Corp | 0
+CF |  CF Industries Holdings Inc | 0
+SCHW |  Charles Schwab | 0
+CHTR |  Charter Communications Inc | 0
+CVX |  Chevron | 0
+CMG |  Chipotle | 0
+CB |  Chubb Ltd | 0
+CHD |  Church & Dwight Co Inc | 0
+CI |  Cigna Corp | 0
+XEC |  Cimarex Energy Co | 0
+CINF |  Cincinnati Financial Corp | 0
+CTAS |  Cintas Corp | 0
+CSCO |  Cisco | 0
+C |  Citigroup | 0
+CFG |  Citizens Financial Group Inc | 0
+CTXS |  Citrix Systems Inc | 0
+CLX |  Clorox Co | 0
+CME |  CME Group Inc | 0
+CMS |  CMS Energy Corp | 0
+KO |  Coca-Cola | 0
+CTSH |  Cognizant Technology Solutions Corp | 0
+CL |  Colgate-Palmolive | 0
+CMCSA |  Comcast | 0
+CMA |  Comerica Inc | 0
+CAG |  Conagra Brands Inc | 0
+CXO |  Concho Resources Inc | 0
+COP |  ConocoPhillips | 0
+ED |  Consolidated Edison Inc | 0
+STZ |  Constellation Brands Inc | 0
+COO |  Cooper Companies Inc | 0
+CPRT |  Copart Inc | 0
+GLW |  Corning | 0
+COST |  Costco | 0
+COTY |  Coty Inc | 0
+CCI |  Crown Castle International Corp | 0
+CSX |  CSX Corp | 0
+CMI |  Cummins Inc | 0
+CVS |  CVS Caremark | 0
+DHI |  D.R. Horton Inc | 0
+DHR |  Danaher Corp | 0
+DRI |  Darden Restaurants Inc | 0
+DVA |  Davita Inc | 0
+DE |  Deere & Co | 0
+DAL |  Delta Air Lines | 1
+XRAY |  Dentsply Sirona Inc | 0
+DVN |  Devon Energy Corp | 0
+FANG |  Diamondback Energy Inc | 0
+DLR |  Digital Realty Trust Inc | 0
+DFS |  Discover Financial Services | 0
+DISCK |  Discovery Inc | 0
+DISCA |  Discovery Inc | 0
+DISH |  DISH Network | 0
+DIS |  Disney | 1
+DG |  Dollar General | 0
+DLTR |  Dollar Tree Inc | 0
+D |  Dominion Energy Inc | 0
+DOV |  Dover Corp | 0
+DWDP |  DowDuPont Inc | 0
+DTE |  DTE Energy Co | 0
+DUK |  Duke Energy | 0
+DRE |  Duke Realty Corp | 0
+DXC |  DXC Technology Co | 0
+ETFC |  E*TRADE Financial Corp | 0
+EMN |  Eastman Chemical Co | 0
+ETN |  Eaton Corporation PLC | 0
+EBAY |  eBay | 0
+ECL |  Ecolab Inc | 0
+EIX |  Edison International | 0
+EW |  Edwards Lifesciences Corp | 0
+EA |  Electronic Arts Inc | 0
+LLY |  Eli Lilly and Co | 0
+EMR |  Emerson Electric Co | 0
+ETR |  Entergy Corp | 0
+EOG |  EOG Resources Inc | 0
+EFX |  Equifax Inc | 0
+EQIX |  Equinix Inc | 0
+EQR |  Equity Residential | 0
+ESS |  Essex Property Trust Inc | 0
+EL |  Estee Lauder | 0
+RE |  Everest Re Group Ltd | 0
+EVRG |  Evergy Inc | 0
+ES |  Eversource Energy | 0
+EXC |  Exelon | 0
+EXPE |  Expedia Group Inc | 0
+EXPD |  Expeditors International of Washington Inc | 0
+EXR |  Extra Space Storage Inc | 0
+XOM |  Exxon Mobil | 0
+FFIV |  F5 Networks Inc | 0
+FB |  Facebook | 1
+FAST |  Fastenal Co | 0
+FRT |  Federal Realty Investment Trust | 0
+FDX |  FedEx | 0
+FIS |  Fidelity National Information Services Inc | 0
+FITB |  Fifth Third Bancorp | 0
+FRC |  First Republic Bank | 0
+FE |  FirstEnergy Corp | 0
+FISV |  Fiserv Inc | 0
+FLT |  Fleetcor Technologies Inc | 0
+FLIR |  FLIR Systems Inc | 0
+FLS |  Flowserve Corp | 0
+FLR |  Fluor Corp | 0
+FMC |  FMC Corp | 0
+FL |  Foot Locker Inc | 0
+F |  Ford | 0
+FTNT |  Fortinet Inc | 0
+FTV |  Fortive Corp | 0
+FBHS |  Fortune Brands Home & Security Inc | 0
+BEN |  Franklin Resources | 0
+FCX |  Freeport-McMoRan Inc | 0
+GPS |  Gap | 0
+GRMN |  Garmin Ltd | 0
+IT |  Gartner Inc | 0
+GD |  General Dynamics | 0
+GE |  General Electric | 0
+GIS |  General Mills | 0
+GPC |  Genuine Parts Co | 0
+GILD |  Gilead Sciences | 0
+GPN |  Global Payments Inc | 0
+GM |  GM | 0
+GS |  Goldman Sachs | 0
+GT |  Goodyear Tire & Rubber Co | 0
+GOOGL |  Google | 1
+GOOG |  Google | 1
+HRB |  H & R Block Inc | 0
+HAL |  Halliburton | 0
+HBI |  HanesBrands Inc | 0
+HOG |  Harley-Davidson Inc | 0
+HRS |  Harris Corp | 0
+HIG |  Hartford Financial Services Group Inc | 0
+HAS |  Hasbro Inc | 0
+HCA |  HCA Healthcare Inc | 0
+HCP |  HCP Inc | 0
+HP |  Helmerich and Payne Inc | 0
+HSIC |  Henry Schein Inc | 0
+HSY |  Hershey | 0
+HES |  Hess | 0
+HPE |  Hewlett Packard Enterprise Co | 0
+HPQ |  Hewlett-Packard | 0
+HLT |  Hilton Worldwide Holdings Inc | 0
+HFC |  HollyFrontier Corp | 0
+HOLX |  Hologic Inc | 0
+HD |  Home Depot | 0
+HON |  Honeywell | 0
+HRL |  Hormel Foods Corp | 0
+HST |  Host Hotels & Resorts Inc | 0
+HUM |  Humana Inc | 0
+HBAN |  Huntington Bancshares Inc | 0
+HII |  Huntington Ingalls Industries Inc | 0
+IBM |  IBM | 0
+IDXX |  IDEXX Laboratories Inc | 0
+INFO |  IHS Markit Ltd | 0
+ITW |  Illinois Tool Works Inc | 0
+ILMN |  Illumina Inc | 0
+INCY |  Incyte Corp | 0
+IR |  Ingersoll-Rand | 0
+INTC |  Intel | 1
+ICE |  Intercontinental Exchange Inc | 0
+IFF |  International Flavors & Fragrances Inc | 0
+IP |  International Paper Co | 0
+IPG |  Interpublic Group of Companies Inc | 0
+INTU |  Intuit | 0
+ISRG |  Intuitive Surgical | 0
+IVZ |  Invesco Ltd | 0
+IPGP |  IPG Photonics Corp | 0
+IQV |  Iqvia Holdings Inc | 0
+IRM |  Iron Mountain Inc | 0
+JBHT |  J B Hunt Transport Services Inc | 0
+SJM |  J M Smucker Co | 0
+JKHY |  Jack Henry & Associates Inc | 0
+JEC |  Jacobs Engineering Group Inc | 0
+JEF |  Jefferies Financial Group Inc | 0
+JNJ |  Johnson & Johnson | 0
+JPM |  JPMorgan Chase | 0
+JNPR |  Juniper Networks Inc | 0
+KSU |  Kansas City Southern | 0
+K |  Kellogg | 0
+KEY |  KeyCorp | 0
+KEYS |  Keysight Technologies Inc | 0
+KMB |  Kimberly-Clark | 0
+KIM |  Kimco Realty Corp | 0
+KMI |  Kinder Morgan | 0
+KLAC |  KLA-Tencor Corp | 0
+KSS |  Kohls Corp | 0
+KHC |  Kraft Heinz Co | 0
+KR |  Kroger Co | 0
+LB |  L Brands Inc | 0
+LLL |  L3 Technologies Inc | 0
+LH |  Laboratory Corporation of America Holdings | 0
+LRCX |  Lam Research Corp | 0
+LW |  Lamb Weston Holdings Inc | 0
+LEG |  Leggett & Platt Inc | 0
+LEN |  Lennar Corp | 0
+LNC |  Lincoln National Corp | 0
+LIN |  Linde PLC | 0
+LKQ |  LKQ Corp | 0
+LMT |  Lockheed Martin | 0
+L |  Loews Corp | 0
+LOW |  Lowe's | 0
+LYB |  LyondellBasell Industries NV | 0
+MTB |  M&T Bank | 0
+MAC |  Macerich Co | 0
+M |  Macy's | 0
+MRO |  Marathon Oil | 0
+MPC |  Marathon Petroleum | 0
+MAR |  Marriott | 0
+MMC |  Marsh & McLennan Companies Inc | 0
+MLM |  Martin Marietta Materials Inc | 0
+MAS |  Masco Corp | 0
+MA |  MasterCard | 0
+MAT |  Mattel Inc | 0
+MXIM |  Maxim Integrated Products Inc | 0
+MKC |  McCormick & Company Inc | 0
+MCD |  McDonald's | 0
+MCK |  McKesson Corp | 0
+MDT |  Medtronic PLC | 0
+MRK |  Merck | 0
+MET |  Metlife | 0
+MTD |  Mettler-Toledo International Inc | 0
+MGM |  MGM Resorts International | 0
+CPRI |  Michael Kors | 0
+MCHP |  Microchip Technology Inc | 0
+MU |  Micron Technology Inc | 0
+MSFT |  Microsoft | 1
+MAA |  Mid-America Apartment Communities Inc | 0
+MHK |  Mohawk Industries Inc | 0
+TAP |  Molson Coors Brewing Co | 0
+MDLZ |  Mondelez International Inc | 0
+MNST |  Monster Beverage Corp | 0
+MCO |  Moody's Corp | 0
+MS |  Morgan Stanley | 0
+MOS |  Mosaic Co | 0
+MSI |  Motorola | 0
+MSCI |  MSCI Inc | 0
+MYL |  Mylan NV | 0
+NDAQ |  Nasdaq Inc | 0
+NOV |  National Oilwell Varco Inc | 0
+NKTR |  Nektar Therapeutics | 0
+NTAP |  NetApp Inc | 0
+NFLX |  Netflix | 4
+NWL |  Newell Brands Inc | 0
+NFX |  Newfield Exploration Co | 0
+NEM |  Newmont Mining Corp | 0
+NWSA |  News Corp | 0
+NWS |  News Corp | 0
+NEE |  NextEra Energy | 0
+NLSN |  Nielsen Holdings PLC | 0
+NKE |  Nike | 0
+NI |  NiSource Inc | 0
+NBL |  Noble Energy | 0
+JWN |  Nordstrom Inc | 0
+NSC |  Norfolk Southern | 0
+NTRS |  Northern Trust | 0
+NOC |  Northrop Grumman | 0
+NCLH |  Norwegian Cruise Line Holdings Ltd | 0
+NRG |  NRG Energy Inc | 0
+NUE |  Nucor Corp | 0
+NVDA |  NVIDIA Corp | 0
+ORLY |  O'Reilly Automotive Inc | 0
+OXY |  Occidental Petroleum | 0
+OMC |  Omnicom Group Inc | 0
+OKE |  ONEOK Inc | 0
+ORCL |  Oracle | 0
+PCAR |  PACCAR Inc | 0
+PKG |  Packaging Corp of America | 0
+PH |  Parker-Hannifin Corp | 0
+PAYX |  Paychex Inc | 0
+PYPL |  PayPal Holdings Inc | 0
+PNR |  Pentair plc | 0
+PBCT |  People's United Financial Inc | 0
+PEP |  Pepsi | 0
+PKI |  PerkinElmer Inc | 0
+PRGO |  Perrigo Company PLC | 0
+PFE |  Pfizer | 0
+PCG |  PG&E | 1
+PM |  Philip Morris | 0
+PSX |  Phillips 66 | 0
+PNW |  Pinnacle West Capital Corp | 0
+PXD |  Pioneer Natural Resources Co | 0
+PNC |  PNC Financial Services Group | 0
+PPG |  PPG Industries | 0
+PPL |  PPL | 0
+BKNG |  Priceline | 0
+PFG |  Principal Financial Group Inc | 0
+PG |  Procter & Gamble | 0
+PGR |  Progressive Corp | 0
+PLD |  Prologis Inc | 0
+PRU |  Prudential | 0
+PEG |  Public Service Enterprise Group Inc | 0
+PSA |  Public Storage | 0
+PHM |  PulteGroup Inc | 0
+PVH |  PVH Corp | 0
+QRVO |  Qorvo Inc | 0
+QCOM |  Qualcomm | 0
+PWR |  Quanta Services Inc | 0
+DGX |  Quest Diagnostics Inc | 0
+RL |  Ralph Lauren Corp | 0
+RJF |  Raymond James Financial Inc | 0
+RTN |  Raytheon | 0
+O |  Realty Income Corp | 0
+RHT |  Red Hat Inc | 0
+REG |  Regency Centers Corp | 0
+REGN |  Regeneron Pharmaceuticals | 0
+RF |  Regions Financial Corp | 0
+RSG |  Republic Services Inc | 0
+RMD |  ResMed Inc | 0
+RHI |  Robert Half International Inc | 0
+ROK |  Rockwell Automation Inc | 0
+ROL |  Rollins Inc | 0
+ROP |  Roper Technologies Inc | 0
+ROST |  Ross Stores Inc | 0
+RCL |  Royal Caribbean Cruises Ltd | 0
+SPGI |  S&P Global Inc | 0
+CRM |  Salesforce.com | 0
+SBAC |  SBA Communications Corp | 0
+SLB |  Schlumberger | 0
+STX |  Seagate Technology PLC | 0
+SEE |  Sealed Air Corp | 0
+SRE |  Sempra Energy | 0
+SHW |  Sherwin-Williams Co | 0
+SPG |  Simon Property Group Inc | 0
+SWKS |  Skyworks Solutions Inc | 0
+SLG |  SL Green Realty Corp | 0
+SNA |  Snap-On Inc | 0
+SO |  Southern Co | 0
+LUV |  Southwest Airlines | 0
+SWK |  Stanley Black & Decker Inc | 0
+SBUX |  Starbucks | 0
+STT |  State Street | 0
+SYK |  Stryker Corp | 0
+STI |  SunTrust Banks Inc | 0
+SIVB |  SVB Financial Group | 0
+SYMC |  Symantec Corp | 0
+SYF |  Synchrony Financial | 0
+SNPS |  Synopsys Inc | 0
+SYY |  Sysco Corp | 0
+TROW |  T. Rowe Price Group Inc | 0
+TTWO |  Take-Two Interactive Software Inc | 0
+TPR |  Tapestry Inc | 0
+TGT |  Target | 0
+TEL |  TE Connectivity | 0
+FTI |  TechnipFMC PLC | 0
+TXN |  Texas Instruments | 0
+TXT |  Textron Inc | 0
+TMO |  Thermo Fisher Scientific Inc | 0
+TIF |  Tiffany & Co | 0
+TJX |  TJX Companies Inc | 0
+TMK |  Torchmark Corp | 0
+TSS |  Total System Services Inc | 0
+TSCO |  Tractor Supply Co | 0
+TDG |  TransDigm Group Inc | 0
+TRV |  Travelers Companies Inc | 0
+TRIP |  TripAdvisor Inc | 0
+FOXA |  Twenty-First Century Fox | 0
+FOX |  Twenty-First Century Fox | 0
+TWTR |  Twitter | 0
+JCI |  Tyco | 0
+TSN |  Tyson Foods Inc | 0
+USB |  U.S. Bancorp | 0
+UDR |  UDR Inc | 0
+ULTA |  Ulta Beauty Inc | 0
+UA |  Under Armour | 0
+UAA |  Under Armour | 0
+UNP |  Union Pacific | 0
+UAL |  United Continental Holdings | 0
+URI |  United Rentals Inc | 0
+UTX |  United Technologies | 0
+UNH |  UnitedHealth | 0
+UHS |  Universal Health Services Inc | 0
+UNM |  Unum Group | 0
+UPS |  UPS | 0
+VLO |  Valero Energy | 0
+VAR |  Varian Medical Systems Inc | 0
+VTR |  Ventas Inc | 0
+VRSN |  Verisign Inc | 0
+VRSK |  Verisk Analytics Inc | 0
+VZ |  Verizon | 1
+VRTX |  Vertex Pharmaceuticals Inc | 0
+VFC |  VF Corp | 0
+VIAB |  Viacom | 0
+V |  Visa | 0
+VNO |  Vornado Realty Trust | 0
+VMC |  Vulcan Materials Co | 0
+GWW |  W W Grainger Inc | 0
+WMT |  Wal-Mart | 0
+WBA |  Walgreen | 0
+WM |  Waste Management Inc | 0
+WAT |  Waters Corp | 0
+WEC |  WEC Energy Group Inc | 0
+WCG |  WellCare Health Plans Inc | 0
+ANTM |  WellPoint | 0
+WFC |  Wells Fargo | 0
+WELL |  Welltower Inc | 0
+WDC |  Western Digital Corp | 0
+WU |  Western Union Co | 0
+WRK |  Westrock Co | 0
+WY |  Weyerhaeuser Co | 0
+WHR |  Whirlpool Corp | 0
+WMB |  Williams Companies | 0
+WLTW |  Willis Towers Watson PLC | 0
+WYNN |  Wynn Resorts | 0
+XEL |  Xcel Energy Inc | 0
+XRX |  Xerox | 0
+XLNX |  Xilinx Inc | 0
+XYL |  Xylem Inc | 0
+YUM |  Yum! Brands | 0
+ZBH |  Zimmer Biomet Holdings Inc | 0
+ZION |  Zions Bancorporation NA | 0
+ZTS |  Zoetis Inc | 0

@@ -2,11 +2,15 @@ import bs4
 from bs4 import BeautifulSoup
 import requests
 import datetime
+import PlayGame          #for TEMP SYSTEM
+import CompanyProfiler   #for TEMP SYSTEM
+import BuildTrainSet     #for TEMP SYSTEM
+import TrainData         #for TEMP SYSTEM
 
 
 urlBaseStr = "https://money.cnn.com/data/markets/sandp/?page="
 d = datetime.datetime.today()
-dateStamp = str(d.year) + "-" + str(d.month) + "-" + str(d.day)
+dateStamp = str(d.year) + "-" + str(d.month) + "-" + str(d.day-1)
 
 def getStockList(soupContent):
     return soupContent.select("div tbody tr")
@@ -71,4 +75,11 @@ for p in range(1,35):
                          stockColumns[5].get_text()+" | "+stockColumns[6].get_text()+'\n')
 
         #INSTEAD OF PRINTING, SHOULD WRITE TO FILE
+
+
+if d.hour < 12:
+    import RunMarket
+    import RecordDailyGrowth
+
+
 

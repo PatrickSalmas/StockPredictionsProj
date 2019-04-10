@@ -367,7 +367,6 @@ PEP | Pepsi
 PKI | PerkinElmer Inc
 PRGO | Perrigo Company PLC
 PFE | Pfizer
-PCG | PG&E
 PM | Philip Morris
 PSX | Phillips 66
 PNW | Pinnacle West Capital Corp

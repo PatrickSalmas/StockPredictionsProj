@@ -1,21 +1,22 @@
 import os
 
 class Profiler:
-    def __init__(self,company):
+    def __init__(self,company,investment):
         self.CoName = company
         self.money_in = 0
         # self.liquidVal = 0        #line0       total value in stocks  + pool(leftover/remainder)
         self.numStocks = 0        #line1
         self.onTimeout = True     #line3
-        self.high = 0     #line4
-        self.low = 0   #line5
+        self.high = 0.0     #line4
+        self.low = 0.0   #line5
         self.pool = 0             #line2
         self.startInvestment = 0  #line6
         self.liquidVal = 0
-        self.profileFile = "C:/Users/psalm/Documents/S&P500_Profiles/"+company+".txt"
+        self.profileFile = "C:/Users/psalm/Documents/S&P500_Profiles/"+str(investment)+"/"+company+".txt"
         self.stockFile = "C:/Users/psalm/Documents/S&P500Data_End/"+company+"_DailyData.txt"
         self.CoEndData = []
         self.stockTradeFee = 7
+        self.investment = investment
         self.getCurrentProfile()
         #Maybe need to create something so that everytime a profile is loaded, it's liquidVal is updated based
         #upon current stock price, for now being done from PlayGame.py
@@ -72,8 +73,8 @@ class Profiler:
             self.initNewProfile()
 
     def initNewProfile(self):
-        self.startInvestment = 1500   #for now hardcoded
-        self.pool = 1500
+        self.startInvestment = self.investment   #for now hardcoded
+        self.pool = self.investment
         # self.liquidVal = 1500
 
 

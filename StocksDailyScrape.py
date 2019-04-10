@@ -10,7 +10,7 @@ import TrainData         #for TEMP SYSTEM
 
 urlBaseStr = "https://money.cnn.com/data/markets/sandp/?page="
 d = datetime.datetime.today()
-dateStamp = str(d.year) + "-" + str(d.month) + "-" + str(d.day-1)
+dateStamp = str(d.year) + "-" + str(d.month) + "-" + str(d.day)
 
 def getStockList(soupContent):
     return soupContent.select("div tbody tr")
@@ -29,9 +29,12 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 select = soup.select("body tr span")
 overallVal = select[0].get_text()
+overallVal = overallVal.replace(",","")
 select = soup.select("div.wsod_fLeft td.wsod_quoteDataPoint")
 tdVolume = select[4].get_text()
+tdVolume = tdVolume.replace(",","")
 avgVolume = select[5].get_text()
+avgVolume = avgVolume.replace(",","")
 avgPE = select[6].get_text()
 ytdChg = select[7].get_text()
 
@@ -68,10 +71,12 @@ for p in range(1,35):
 
         # fileName = "D:/Users/psalmas/Documents/S&P500Data/"+longName + "_DailyData.txt"
 
-        print shortName, " | ",longName," | ",stockColumns[1].get_text()," | ",stockColumns[2].get_text()," | ",stockColumns[3].get_text()," | ",stockColumns[4].get_text()," | ",stockColumns[5].get_text()," | ",stockColumns[6].get_text(),'\n'
+        stockValue = stockColumns[1].get_text()
+        stockValue = stockValue.replace(",","")
+        print shortName, " | ",longName," | ",stockValue," | ",stockColumns[2].get_text()," | ",stockColumns[3].get_text()," | ",stockColumns[4].get_text()," | ",stockColumns[5].get_text()," | ",stockColumns[6].get_text(),'\n'
 
 
-        stocksFile.write(dateStamp+" | "+stockColumns[1].get_text()+" | "+stockColumns[4].get_text()+" | "+
+        stocksFile.write(dateStamp+" | "+stockValue+" | "+stockColumns[4].get_text()+" | "+
                          stockColumns[5].get_text()+" | "+stockColumns[6].get_text()+'\n')
 
         #INSTEAD OF PRINTING, SHOULD WRITE TO FILE

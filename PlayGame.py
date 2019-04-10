@@ -2,9 +2,9 @@ import CompanyProfiler
 import MakePrediction
 
 class Game:
-    def __init__(self,company):
+    def __init__(self,company,pctIncrease,pctDecrease,investment):
         self.CoName = company
-        self.CoProfile = CompanyProfiler.Profiler(company)
+        self.CoProfile = CompanyProfiler.Profiler(company,investment)
         # self.CoProfile = CompanyProfiler.Profiler("AAPL")
         # self.initCoProfile()
         self.stockFile = "C:/Users/psalm/Documents/S&P500Data_Start/"+company+"_DailyData.txt"
@@ -13,9 +13,11 @@ class Game:
         self.stockPrice = 0
         self.stockTradeFee = 7.0
         self.initStockPrice()
-        self.FiveDayPred = 0
+        self.Pred = 0
         self.CoProfile.updateMoneyIn(self.stockPrice)
         self.CoProfile.updateHighLow(self.stockPrice)
+        self.pctIncrease = pctIncrease*.01
+        self.pctDecrease = pctDecrease*.01
         #update high/low values in companyProfiler
 
     # def initCoProfile(self):
@@ -25,6 +27,7 @@ class Game:
     def initStockPrice(self):
         stockFile = open(self.stockFile,"r")
         data = stockFile.readlines()
+        self.stockData = data[:]
         top = len(data)-1
         stockLine = data[top]
         price = stockLine.split("|")[1]
@@ -38,28 +41,27 @@ class Game:
             return int(self.CoProfile.pool / self.stockPrice)
 
     def projectedValue(self):
-        if self.CoProfile.high == 0.0 and self.CoProfile.low == 0.0:
+        if self.CoProfile.low == 0.0:
             self.CoProfile.low = self.CoProfile.getStockValue()
             self.CoProfile.writeProfile()
 
         #get 5 day prediction here
         # predictor = MakePrediction.Prediction("AAPL")
-        predictor = MakePrediction.Prediction(self.CoName)
+        predictor = MakePrediction.Prediction(self.CoName,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
         predictor.loadData()
-        predictor.initCLF_5Day()
-        predictor.buildPredSet_5Day()
-        predictor.FiveDayPred = predictor.clf_5Day.predict(predictor.XPredSet_5Day)[0]
-        self.FiveDayPred = predictor.FiveDayPred
+        predictor.initCLF()
+        predictor.buildPredSet()
+        predictor.Pred = predictor.clf.predict(predictor.XPredSet)[0]
+        self.Pred = predictor.Pred
         stockCount = self.CoProfile.numStocks
-        print(self.CoName)
-        print("Predicted Price: ", predictor.FiveDayPred, " and Current Price ",self.stockPrice)
+        # print(self.CoName)
+        # print("Predicted Price: ", predictor.Pred, " and Current Price ",self.stockPrice)
         if self.CoProfile.onTimeout is False:
-            return ((stockCount * predictor.FiveDayPred) - (stockCount * self.stockPrice))
+            return ((stockCount * predictor.Pred) - (stockCount * self.stockPrice))
         else:
             potStock = self.potentialStockCount()
-            # print(potStock)
-            return ((potStock * predictor.FiveDayPred) - (potStock * self.stockPrice))
-        # print(predictor.FiveDayPred)
+            return ((potStock * predictor.Pred) - (potStock * self.stockPrice))
+        # print(predictor.Pred)
 
     def play(self):
         projVal = self.projectedValue()
@@ -68,20 +70,23 @@ class Game:
         if self.CoProfile.onTimeout is False and projVal < 0:
             numStk = self.CoProfile.numStocks
             high = self.CoProfile.high
-            potVal = ((numStk * self.FiveDayPred) - (numStk * high))
+            potVal = ((numStk * self.Pred) - (numStk * high))
+            stkValDecrease = self.Pred - self.CoProfile.high
             # print potVal
-            if potVal < 0 and abs(potVal) > (self.stockTradeFee*.75):
+            print("Stock value decrease is ", abs(stkValDecrease), " and value to beat is ",self.stockPrice*self.pctDecrease)
+            if potVal < 0 and abs(potVal) > self.stockTradeFee and abs(stkValDecrease) > (self.stockPrice*self.pctDecrease):
                 print(self.CoName + " Selling Out!")
                 self.CoProfile.sellOut(self.stockPrice)
                 self.CoProfile.writeProfile()
         if self.CoProfile.onTimeout is True and projVal > 0:
             potStockCnt = self.potentialStockCount()
             low = self.CoProfile.low
-            potVal = ((potStockCnt * self.FiveDayPred) - (potStockCnt * low))
-            # print(potStockCnt * self.FiveDayPred)
+            potVal = ((potStockCnt * self.Pred) - (potStockCnt * low))
+            stkValIncrease = self.Pred - self.CoProfile.low
+            # print(potStockCnt * self.Pred)
             # print(potStockCnt * low)
             # print(potVal)
-            if potVal > 0 and abs(potVal) > (self.stockTradeFee*.75):
+            if potVal > 0 and abs(potVal) > self.stockTradeFee and stkValIncrease > (self.stockPrice*self.pctIncrease):
                 print(self.CoName + " Buying In!")
                 self.CoProfile.buyIn(self.stockPrice, potStockCnt)
                 self.CoProfile.writeProfile()

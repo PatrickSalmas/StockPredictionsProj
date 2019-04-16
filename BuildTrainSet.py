@@ -3,12 +3,12 @@ import FeatClasses
 class TrainBuilder:
     def __init__(self,company,nDayPred,co_featArr,sp_featArr):
         self.CoName = company
-        self.CoEndFile = "C:/Users/psalm/Documents/S&P500Data_End/"+company+"_DailyData.txt"
-        self.SPEndFile = "C:/Users/psalm/Documents/S&P500Data_End/SP500_DailyData.txt"
+        self.CoEndFile = "C:/Users/psalm/Documents/StockProj/S&P500Data_End/"+company+"_DailyData.txt"
+        self.SPEndFile = "C:/Users/psalm/Documents/StockProj/S&P500Data_End/SP500_DailyData.txt"
         self.CoEndData = []
         self.SPEndData = []
-        self.trainXs_loc = "C:/Users/psalm/Documents/TrainS&P500_Xs/"+company+".txt"
-        self.trainYs_loc = "C:/Users/psalm/Documents/TrainS&P500_Ys/"+company+".txt"
+        self.trainXs_loc = "C:/Users/psalm/Documents/StockProj/TrainS&P500_Xs/"+company+".txt"
+        self.trainYs_loc = "C:/Users/psalm/Documents/StockProj/TrainS&P500_Ys/"+company+".txt"
         self.co_featArr = co_featArr
         self.sp_featArr = sp_featArr
         self.nDayPred = nDayPred

@@ -4,11 +4,8 @@ import MakePrediction
 class Game:
     def __init__(self,company,pctIncrease,pctDecrease,investment):
         self.CoName = company
-        self.CoProfile = CompanyProfiler.Profiler(company,investment)
-        # self.CoProfile = CompanyProfiler.Profiler("AAPL")
-        # self.initCoProfile()
-        self.stockFile = "C:/Users/psalm/Documents/S&P500Data_Start/"+company+"_DailyData.txt"
-        # self.stockFile = "C:/Users/psalm/Documents/S&P500Data_Start/AAPL_DailyData.txt"
+        self.CoProfile = CompanyProfiler.Profiler(company,investment,pctIncrease,pctDecrease)
+        self.stockFile = "C:/Users/psalm/Documents/StockProj/S&P500Data_Start/"+company+"_DailyData.txt"
         self.stockData = []
         self.stockPrice = 0
         self.stockTradeFee = 7.0
@@ -19,10 +16,6 @@ class Game:
         self.pctIncrease = pctIncrease*.01
         self.pctDecrease = pctDecrease*.01
         #update high/low values in companyProfiler
-
-    # def initCoProfile(self):
-    #     self.CoProfile = CompanyProfiler.Profiler("AAPL")
-    #     self.CoProfile.getCurrentProfile()
 
     def initStockPrice(self):
         stockFile = open(self.stockFile,"r")
@@ -78,6 +71,7 @@ class Game:
                 print(self.CoName + " Selling Out!")
                 self.CoProfile.sellOut(self.stockPrice)
                 self.CoProfile.writeProfile()
+                return "sell"
         if self.CoProfile.onTimeout is True and projVal > 0:
             potStockCnt = self.potentialStockCount()
             low = self.CoProfile.low
@@ -90,6 +84,9 @@ class Game:
                 print(self.CoName + " Buying In!")
                 self.CoProfile.buyIn(self.stockPrice, potStockCnt)
                 self.CoProfile.writeProfile()
+                return "buy"
+
+        return "nothing"
 
 
 

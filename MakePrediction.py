@@ -12,10 +12,10 @@ class Prediction:
         self.CoName = company
         self.Pred = 0
         self.clf = linear_model.Ridge(1.0, fit_intercept=False)
-        self.CoEndFile = "C:/Users/psalm/Documents/S&P500Data_End/"+company+"_DailyData.txt"  # for now hard coding the endFile to retrieve data from
-        self.SPEndFile = "C:/Users/psalm/Documents/S&P500Data_End/SP500_DailyData.txt"
-        self.trainXs_loc = "C:/Users/psalm/Documents/TrainS&P500_Xs/"+company+".txt"
-        self.trainYs_loc = "C:/Users/psalm/Documents/TrainS&P500_Ys/"+company+".txt"
+        self.CoEndFile = "C:/Users/psalm/Documents/StockProj/S&P500Data_End/"+company+"_DailyData.txt"  # for now hard coding the endFile to retrieve data from
+        self.SPEndFile = "C:/Users/psalm/Documents/StockProj/S&P500Data_End/SP500_DailyData.txt"
+        self.trainXs_loc = "C:/Users/psalm/Documents/StockProj/TrainS&P500_Xs/"+company+".txt"
+        self.trainYs_loc = "C:/Users/psalm/Documents/StockProj/TrainS&P500_Ys/"+company+".txt"
         self.CoEndData = []
         self.SPEndData = []
         self.xVec = []

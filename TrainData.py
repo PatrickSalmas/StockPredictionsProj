@@ -7,8 +7,8 @@ from sklearn import svm
 class Trainer:
     def __init__(self, company):
         self.CoName = company
-        self.XTrainFile = "C:/Users/psalm/Documents/TrainS&P500_Xs/"+company+".txt"
-        self.YTrainFile = "C:/Users/psalm/Documents/TrainS&P500_Ys/"+company+".txt"
+        self.XTrainFile = "C:/Users/psalm/Documents/StockProj/TrainS&P500_Xs/"+company+".txt"
+        self.YTrainFile = "C:/Users/psalm/Documents/StockProj/TrainS&P500_Ys/"+company+".txt"
         self.XData = []
         self.YData = []
         self.XTrainSet = []
@@ -24,7 +24,7 @@ class Trainer:
         for x in XLines:
             self.XData.append(x)
         for y in YLines:
-            y = y.replace(",","")
+            # y = y.replace(",","")
             self.YTrainSet.append(float(y.rstrip()))
             self.YData.append(y)
 
@@ -34,7 +34,7 @@ class Trainer:
             xArr = x.split("|")
             xArr = xArr[:len(xArr)-1]
             for xI in range(0,len(xArr)):
-                xArr[xI] = xArr[xI].replace(',','')
+                # xArr[xI] = xArr[xI].replace(',','')
                 xArr[xI] = float(xArr[xI])
             self.XTrainSet.append(self.feature(xArr))
 

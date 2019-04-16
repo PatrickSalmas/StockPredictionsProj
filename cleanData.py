@@ -1,5 +1,5 @@
 #Script for removing all the commas from current data sets
-
+import os
 
 # SP500_fNameStart = "C:/Users/psalm/Documents/S&P500Data_Start_temp/SP500_DailyData.txt"
 # SP500_fNameEnd = "C:/Users/psalm/Documents/S&P500Data_End_temp/SP500_DailyData.txt"
@@ -47,3 +47,18 @@
 #         d = d.replace(",","")
 #         endWriteFile.write(d)
 
+#
+# profilePath = "C:/Users/psalm/Documents/Test/test1/some.txt"
+# if not os.path.exists(profilePath):
+#     os.makedirs(profilePath)
+#
+# for j in range(0,5):
+#     print j
+
+#500, 600, 700, 800, 900, 1000
+buys = []
+sells = []
+for i in range(0,6):
+    buys.append([0,0,0,0,0])
+
+print buys

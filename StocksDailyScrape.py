@@ -39,9 +39,9 @@ avgPE = select[6].get_text()
 ytdChg = select[7].get_text()
 
 if d.hour < 12:
-    SP500_fName = "C:/Users/psalm/Documents/S&P500Data_Start/SP500_DailyData.txt"
+    SP500_fName = "C:/Users/psalm/Documents/StockProj/S&P500Data_Start/SP500_DailyData.txt"
 else:
-    SP500_fName = "C:/Users/psalm/Documents/S&P500Data_End/SP500_DailyData.txt"
+    SP500_fName = "C:/Users/psalm/Documents/StockProj/S&P500Data_End/SP500_DailyData.txt"
 
 
 SP500_file = open(SP500_fName,"a+")
@@ -62,9 +62,9 @@ for p in range(1,35):
 
 
         if d.hour < 12:
-            fileName = "C:/Users/psalm/Documents/S&P500Data_Start/"+shortName + "_DailyData.txt"
+            fileName = "C:/Users/psalm/Documents/StockProj/S&P500Data_Start/"+shortName + "_DailyData.txt"
         else:
-            fileName = "C:/Users/psalm/Documents/S&P500Data_End/" + shortName + "_DailyData.txt"
+            fileName = "C:/Users/psalm/Documents/StockProj/S&P500Data_End/" + shortName + "_DailyData.txt"
 
         stocksFile = open(fileName,"a+")
 
@@ -79,7 +79,6 @@ for p in range(1,35):
         stocksFile.write(dateStamp+" | "+stockValue+" | "+stockColumns[4].get_text()+" | "+
                          stockColumns[5].get_text()+" | "+stockColumns[6].get_text()+'\n')
 
-        #INSTEAD OF PRINTING, SHOULD WRITE TO FILE
 
 
 if d.hour < 12:

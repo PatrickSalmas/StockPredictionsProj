@@ -20,7 +20,8 @@ for i in investmentList:
             CoProfile = CompanyProfiler.Profiler(shrtName,i,j,j)
             original_totalInvestment[j] += CoProfile.startInvestment
             currentTotalValue[j] += CoProfile.liquidVal
-            # print(shrtName + ": " + str(CoProfile.liquidVal))
+            # if i == 1000 and j == 4:
+            #     print(shrtName + ": " + str(CoProfile.liquidVal))
             profilePath = "C:/Users/psalm/Documents/StockProj/S&P500_GrowthProfiles/"+str(i)+"/"+str(j)+"_"+str(j)+"/CoProf"
             if not os.path.exists(profilePath):
                 os.makedirs(profilePath)

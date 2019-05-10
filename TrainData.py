@@ -35,7 +35,11 @@ class Trainer:
             xArr = xArr[:len(xArr)-1]
             for xI in range(0,len(xArr)):
                 # xArr[xI] = xArr[xI].replace(',','')
-                xArr[xI] = float(xArr[xI])
+                # print(xArr[xI])
+                try:
+                    xArr[xI] = float(xArr[xI])
+                except:
+                    xArr[xI] = 0
             self.XTrainSet.append(self.feature(xArr))
 
 
@@ -47,13 +51,14 @@ class Trainer:
     def fitPredict(self):
         self.clf.fit(self.XTrainSet, self.YTrainSet)
         theta = self.clf.coef_
+        # print(theta)
         self.predTrain = self.clf.predict(self.XTrainSet)
 
 
     def calcAvgDiff(self):
         sum = 0.0
         for i in range(0,len(self.predTrain)):
-            print("Prediction of: ", self.predTrain[i]," and real value of: ", self.YTrainSet[i])
+            # print("Prediction of: ", self.predTrain[i]," and real value of: ", self.YTrainSet[i])
             subSum = self.predTrain[i]-self.YTrainSet[i]
             subSum = abs(subSum)
             sum += subSum

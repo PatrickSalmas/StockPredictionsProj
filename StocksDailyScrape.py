@@ -80,6 +80,8 @@ for p in range(1,35):
                          stockColumns[5].get_text()+" | "+stockColumns[6].get_text()+'\n')
 
 
+#Add appropiate data corresponding to whether or not each company was in top/bottom 10, 50, and 100 companies for the day
+import AppendTopBottomData
 
 if d.hour < 12:
     import RunMarket

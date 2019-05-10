@@ -8,7 +8,7 @@ from sklearn import svm
 
 #This is essentially where we calculate the actual prediction once our model has been created and trained
 class Prediction:
-    def __init__(self,company,co_featArr,sp_featArr):
+    def __init__(self,company,co_featArr,sp_featArr,co_tbArr):
         self.CoName = company
         self.Pred = 0
         self.clf = linear_model.Ridge(1.0, fit_intercept=False)
@@ -22,6 +22,8 @@ class Prediction:
         self.XPredSet = []
         self.co_featArr = co_featArr
         self.sp_featArr = sp_featArr
+        self.co_tbArr = co_tbArr
+
 
 
     def loadData(self):
@@ -46,11 +48,18 @@ class Prediction:
         self.xVec = []
         for f in self.co_featArr:
             feat = FeatClasses.NDayPrev(f,self.CoEndData)
-            self.xVec.append(feat.getValue(index))
+            self.xVec.append(feat.getValue(index,1))
         for f in self.sp_featArr:
             feat = FeatClasses.NDayPrev(f,self.SPEndData)
-            self.xVec.append(feat.getValue(index-1))
-
+            self.xVec.append(feat.getValue(index-1,1))
+        for f in self.co_tbArr:
+            feat = FeatClasses.NDayPrev(f,self.CoEndData)
+            xVec.append(feat.getValue(index,5))
+            xVec.append(feat.getValue(index,6))
+            xVec.append(feat.getValue(index,7))
+            xVec.append(feat.getValue(index,8))
+            xVec.append(feat.getValue(index,9))
+            xVec.append(feat.getValue(index,10))
 
     def clean_xVec(self,xVec):
         for xI in range(0,len(xVec)):
@@ -72,13 +81,22 @@ class Prediction:
     # def buildFeatsOneDayPred(self):
 
 
+# stkNames = "C:/Users/psalm/Documents/AI_Stocks/venv/S&P500Stocks.txt"
+# file = open(stkNames,"r")
+# names = file.readlines()
+
+# for n in names:
+#     shrtName = n.split("|")[0].rstrip()
+#     pred = Prediction(shrtName, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
+#     pred.loadData()
+#     pred.initCLF()
+#     pred.buildPredSet()
 # predMSFT = Prediction("MSFT", [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
 # predMSFT.loadData()
 # predMSFT.initCLF()
 # predMSFT.buildPredSet()
 # predMSFT.Pred = predMSFT.clf.predict(predMSFT.XPredSet)
 # print("MSFT Prediction: ",predMSFT.Pred)
-
 
 
 

@@ -1,9 +1,11 @@
 import FeatClasses
 
 class TrainBuilder:
-    def __init__(self,company,nDayPred,co_featArr,sp_featArr):
+    # tb1 = FeatClasses.TopBottom(1)
+    # tb2 = FeatClasses.TopBottom(2)
+    def __init__(self,company,nDayPred,co_featArr,sp_featArr,co_tbArr):
         self.CoName = company
-        self.CoEndFile = "C:/Users/psalm/Documents/StockProj/S&P500Data_End/"+company+"_DailyData.txt"
+        self.CoEndFile = "C:/Users/psalm/Documents/StockProj/TestDir/"+company+"_DailyData.txt"
         self.SPEndFile = "C:/Users/psalm/Documents/StockProj/S&P500Data_End/SP500_DailyData.txt"
         self.CoEndData = []
         self.SPEndData = []
@@ -11,6 +13,7 @@ class TrainBuilder:
         self.trainYs_loc = "C:/Users/psalm/Documents/StockProj/TrainS&P500_Ys/"+company+".txt"
         self.co_featArr = co_featArr
         self.sp_featArr = sp_featArr
+        self.co_tbArr = co_tbArr
         self.nDayPred = nDayPred
 
 
@@ -43,15 +46,26 @@ class TrainBuilder:
         yLab = self.getLabel(index)
         for f in self.co_featArr:
             feat = FeatClasses.NDayPrev(f+self.nDayPred,self.CoEndData)
-            xVec.append(feat.getValue(index))
+            xVec.append(feat.getValue(index,1))
         for f in self.sp_featArr:
             feat = FeatClasses.NDayPrev(f+self.nDayPred,self.SPEndData)
-            xVec.append(feat.getValue(index-1))        #may want to fix this off by one index error later on
+            xVec.append(feat.getValue(index-1,1))        #may want to fix this off by one index error later on
 
+        for f in self.co_tbArr:
+            feat = FeatClasses.NDayPrev(f+self.nDayPred,self.CoEndData)
+            xVec.append(feat.getValue(index,5))
+            xVec.append(feat.getValue(index,6))
+            xVec.append(feat.getValue(index,7))
+            xVec.append(feat.getValue(index,8))
+            xVec.append(feat.getValue(index,9))
+            xVec.append(feat.getValue(index,10))
+
+
+        # print(xVec,"\n")
         if self.isValid(xVec):
             # xFile.write(xVec)
             for x in xVec:
-                xFile.write(x + " | ")
+                xFile.write(str(x) + " | ")
             xFile.write("\n")
             yFile.write(yLab+"\n")
             # print("Built Data point: ",xVec," ",yLab)

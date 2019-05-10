@@ -1,7 +1,7 @@
 import os
 
 class Profiler:
-    def __init__(self,company,investment,pctIncrease,pctDecrease):
+    def __init__(self,company,dayPred,investment,pctIncrease,pctDecrease):
         self.CoName = company
         self.money_in = 0
         # self.liquidVal = 0        #line0       total value in stocks  + pool(leftover/remainder)
@@ -12,7 +12,7 @@ class Profiler:
         self.pool = 0             #line2
         self.startInvestment = 0  #line6
         self.liquidVal = 0
-        profilePath = "C:/Users/psalm/Documents/StockProj/S&P500_Profiles/"+str(investment)+"/"+str(pctIncrease)+"_"+str(pctDecrease)
+        profilePath = "C:/Users/psalm/Documents/StockProj/S&P500_Profiles/"+str(dayPred)+"DayPred/"+str(investment)+"/"+str(pctIncrease)+"_"+str(pctDecrease)
         if not os.path.exists(profilePath):
             os.makedirs(profilePath)
         self.profileFile = profilePath+"/"+company+".txt"

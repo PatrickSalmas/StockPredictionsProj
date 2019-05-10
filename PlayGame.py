@@ -2,9 +2,9 @@ import CompanyProfiler
 import MakePrediction
 
 class Game:
-    def __init__(self,company,pctIncrease,pctDecrease,investment):
+    def __init__(self,company,dayPred,pctIncrease,pctDecrease,investment):
         self.CoName = company
-        self.CoProfile = CompanyProfiler.Profiler(company,investment,pctIncrease,pctDecrease)
+        self.CoProfile = CompanyProfiler.Profiler(company,dayPred,investment,pctIncrease,pctDecrease)
         self.stockFile = "C:/Users/psalm/Documents/StockProj/S&P500Data_Start/"+company+"_DailyData.txt"
         self.stockData = []
         self.stockPrice = 0
@@ -48,7 +48,9 @@ class Game:
             self.CoProfile.low = self.CoProfile.getStockValue()
             self.CoProfile.writeProfile()
 
-        predictor = MakePrediction.Prediction(self.CoName,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
+        predictor = MakePrediction.Prediction(self.CoName,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+                                              [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+                                               21, 22, 23, 24, 25, 26, 27, 28, 29, 30])
         predictor.loadData()
         predictor.initCLF()
         predictor.buildPredSet()
@@ -75,7 +77,7 @@ class Game:
             potVal = ((numStk * self.Pred) - (numStk * high))
             stkValDecrease = self.Pred - self.CoProfile.high
             if potVal < 0 and abs(potVal) > self.stockTradeFee and abs(stkValDecrease) > (self.stockPrice*self.pctDecrease):
-                print(self.CoName + " Selling Out!")
+                # print(self.CoName + " Selling Out!")
                 self.CoProfile.sellOut(self.stockPrice)
                 self.CoProfile.writeProfile()
                 return "sell"
@@ -85,7 +87,7 @@ class Game:
             potVal = ((potStockCnt * self.Pred) - (potStockCnt * low))
             stkValIncrease = self.Pred - self.CoProfile.low
             if potVal > 0 and abs(potVal) > self.stockTradeFee and stkValIncrease > (self.stockPrice*self.pctIncrease):
-                print(self.CoName + " Buying In!")
+                # print(self.CoName + " Buying In!")
                 self.CoProfile.buyIn(self.stockPrice, potStockCnt)
                 self.CoProfile.writeProfile()
                 return "buy"

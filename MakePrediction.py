@@ -54,12 +54,12 @@ class Prediction:
             self.xVec.append(feat.getValue(index-1,1))
         for f in self.co_tbArr:
             feat = FeatClasses.NDayPrev(f,self.CoEndData)
-            xVec.append(feat.getValue(index,5))
-            xVec.append(feat.getValue(index,6))
-            xVec.append(feat.getValue(index,7))
-            xVec.append(feat.getValue(index,8))
-            xVec.append(feat.getValue(index,9))
-            xVec.append(feat.getValue(index,10))
+            self.xVec.append(feat.getValue(index,5))
+            self.xVec.append(feat.getValue(index,6))
+            self.xVec.append(feat.getValue(index,7))
+            self.xVec.append(feat.getValue(index,8))
+            self.xVec.append(feat.getValue(index,9))
+            self.xVec.append(feat.getValue(index,10))
 
     def clean_xVec(self,xVec):
         for xI in range(0,len(xVec)):

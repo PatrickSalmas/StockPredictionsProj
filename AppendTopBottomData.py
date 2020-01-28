@@ -1,9 +1,14 @@
+#is this script somehow getting called twice?
+#need to debug why sometimes we are recording a double copy
+print("calling appendTopBottom")
+
 import TopBottomStocks
 import ColumnDesigner
 import datetime
 
 d = datetime.datetime.today()
 hour = d.hour
+# hour = 23
 
 stkNames = "C:/Users/psalm/Documents/AI_Stocks/venv/S&P500Stocks.txt"
 file = open(stkNames,"r")
@@ -20,8 +25,8 @@ if hour >= 12:
         todayVal = colDes.getColumn("last",1)
         yesterVal = colDes.getColumn("yesterday",1)
         weightChange = (float(todayVal) - float(yesterVal)) / float(yesterVal)
-        print(shrtName)
-        print(weightChange)
+        # print(shrtName)
+        # print(weightChange)
         tb10.addItem(shrtName,weightChange)
         tb50.addItem(shrtName,weightChange)
         tb100.addItem(shrtName,weightChange)
@@ -29,6 +34,7 @@ if hour >= 12:
     tb10.calculate()
     tb50.calculate()
     tb100.calculate()
+    #when does this loop execute twice for the same company??
     for n in names:
         shrtName = n.split("|")[0].rstrip()
         fileName = "C:/Users/psalm/Documents/StockProj/S&P500Data_End/" + shrtName + "_DailyData.txt"
@@ -52,12 +58,13 @@ else:
         fileNameStart = "C:/Users/psalm/Documents/StockProj/S&P500Data_Start/" + shrtName + "_DailyData.txt"
         colDesEnd = ColumnDesigner.ColumnDesigner(fileNameEnd)
         colDesStart = ColumnDesigner.ColumnDesigner(fileNameStart)
-        colDesStart.appendColumn("last",colDesEnd.getColumn("last",11))
-        colDesStart.appendColumn("last",colDesEnd.getColumn("last",12))
-        colDesStart.appendColumn("last",colDesEnd.getColumn("last",13))
-        colDesStart.appendColumn("last",colDesEnd.getColumn("last",14))
-        colDesStart.appendColumn("last",colDesEnd.getColumn("last",15))
-        colDesStart.appendColumn("last",colDesEnd.getColumn("last",16))
+        # print shrtName
+        colDesStart.appendColumn("last",colDesEnd.getColumn("last",5))
+        colDesStart.appendColumn("last",colDesEnd.getColumn("last",6))
+        colDesStart.appendColumn("last",colDesEnd.getColumn("last",7))
+        colDesStart.appendColumn("last",colDesEnd.getColumn("last",8))
+        colDesStart.appendColumn("last",colDesEnd.getColumn("last",9))
+        colDesStart.appendColumn("last",colDesEnd.getColumn("last",10))
 
 
 # print(tb10.topN)

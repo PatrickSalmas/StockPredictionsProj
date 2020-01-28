@@ -33,15 +33,16 @@ class ColumnDesigner:
         if lineNum == "last":
             data = allData[len(allData)-1]
             cols = data.split("|")
-            return cols[colNum]
+            # print cols
+            return cols[colNum].rstrip()
         if lineNum == "yesterday":
             data = allData[len(allData)-2]
             cols = data.split("|")
-            return cols[colNum]
+            return cols[colNum].rstrip()
         if lineNum < 0: return "null"
         data = allData[lineNum]
         cols = data.split("|")
-        return cols[colNum]
+        return cols[colNum].rstrip()
 
     #delete specified column number (colNum) of data entry specified by line number (lineNum)
     def deleteColumn(self,lineNum,colNum):
@@ -68,7 +69,7 @@ class ColumnDesigner:
 
 
 
-tester = ColumnDesigner("C:/Users/psalm/Documents/StockProj/TestDir/AAP_DailyData.txt")
+# tester = ColumnDesigner("C:/Users/psalm/Documents/StockProj/TestDir/AAP_DailyData.txt")
 # lines = open("C:/Users/psalm/Documents/StockProj/TestDir/AAP_DailyData.txt","r").readlines()
 # for i in range(0,len(lines)):
 #     print(tester.getColumn(i,5)," ",tester.getColumn(i,6))
